@@ -12,11 +12,16 @@ while True:
     # -------------------------------
     # Group 1: Check Balance
     if option == "1":
+<<<<<<< HEAD
         print(f"Your current balance is: {balance} birr.")
+=======
+        print(f"Your current balance is {balance} Birr")
+>>>>>>> cba7947 (Added USSD menu)
 
     # -------------------------------
     # Group 2: Buy Data
     elif option == "2":
+<<<<<<< HEAD
         print("Data packages:")
         print("1. 200MB = 25 birr")
         print("2. 500MB = 50 birr")
@@ -37,10 +42,20 @@ while True:
             print("Insufficient balance or invalid choice.")
 
         print(f"Remaining balance: {balance} birr.")
+=======
+        data_cost = 20
+        if balance >= data_cost:
+            balance -= data_cost
+            print("You have successfully bought data.")
+            print(f"Remaining balance: {balance} Birr")
+        else:
+            print("Insufficient balance to buy data.")
+>>>>>>> cba7947 (Added USSD menu)
 
     # -------------------------------
     # Group 3: Buy Airtime
     elif option == "3":
+<<<<<<< HEAD
         try:
             amount = float(input("Enter airtime amount: "))
             if amount <= balance:
@@ -51,10 +66,20 @@ while True:
                 print("Insufficient balance.")
         except ValueError:
             print("Invalid input. Please enter a number.")
+=======
+        airtime_cost = int(input("Enter airtime amount: "))
+        if airtime_cost <= balance:
+            balance -= airtime_cost
+            print(f"Airtime of {airtime_cost} Birr purchased successfully.")
+            print(f"Remaining balance: {balance} Birr")
+        else:
+            print("Insufficient balance to buy airtime.")
+>>>>>>> cba7947 (Added USSD menu)
 
     # -------------------------------
     # Group 4: Exit
     elif option == "4":
+<<<<<<< HEAD
         print("Thank you for using our service. Goodbye!")
         break
 
@@ -63,3 +88,9 @@ while True:
     else:
         print("Invalid option. Please try again.")
 
+=======
+        print("Thank you for using the USSD service.")
+        break
+    else:
+        print("Invalid option. Please try again.")
+>>>>>>> cba7947 (Added USSD menu)
